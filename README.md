@@ -68,21 +68,35 @@ Live/API benchmarks are not rerun by default. Their committed outputs are under 
 
 ## Paper Build
 
-Compile with MiKTeX from the `paper/` directory:
+Requires any standard TeX distribution providing `pdflatex` (TeX Live, MacTeX, or MiKTeX). Run `pdflatex` twice when citations or cross-references change.
+
+From the `paper/` directory:
+
+```bash
+cd paper
+pdflatex -interaction=nonstopmode Source_Downgrading.tex
+pdflatex -interaction=nonstopmode Source_Downgrading.tex
+```
+
+PowerShell equivalent:
 
 ```powershell
 Push-Location paper
-& "C:\Users\DiegoPC\AppData\Local\Programs\MiKTeX\miktex\bin\x64\pdflatex.exe" -interaction=nonstopmode Source_Downgrading.tex
-& "C:\Users\DiegoPC\AppData\Local\Programs\MiKTeX\miktex\bin\x64\pdflatex.exe" -interaction=nonstopmode Source_Downgrading.tex
+pdflatex -interaction=nonstopmode Source_Downgrading.tex
+pdflatex -interaction=nonstopmode Source_Downgrading.tex
 Pop-Location
 ```
 
-If a viewer locks the PDF, use a temporary job name for verification:
+If a viewer locks the PDF, compile with a temporary job name:
+
+```bash
+pdflatex -interaction=nonstopmode -jobname=Source_Downgrading_verify Source_Downgrading.tex
+```
+
+On Windows, if `pdflatex` is not on `PATH`, invoke MiKTeX directly — for example:
 
 ```powershell
-Push-Location paper
-& "C:\Users\DiegoPC\AppData\Local\Programs\MiKTeX\miktex\bin\x64\pdflatex.exe" -interaction=nonstopmode -jobname=Source_Downgrading_verify Source_Downgrading.tex
-Pop-Location
+& "$env:LOCALAPPDATA\Programs\MiKTeX\miktex\bin\x64\pdflatex.exe" -interaction=nonstopmode Source_Downgrading.tex
 ```
 
 ## Scope

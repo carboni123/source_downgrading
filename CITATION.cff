@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software or paper artifact, please cite it as below."
+title: "Source Downgrading: Trust-Bounded Writeback for Derived Memory Records"
+abstract: >-
+  Source downgrading is an inscription-integrity invariant for derived memory
+  records. Given correctly labeled contributors, a derived record may not carry
+  source integrity higher than its weakest contributor, with inference as the
+  upper bound for derived inscription. This repository is the standalone source
+  of truth for the paper, its validation code, benchmark harnesses, committed
+  result files, and publication-readiness notes.
+type: software
+authors:
+  - given-names: "Diego"
+    family-names: "Falkowski Carboni"
+    email: "diego@tyxter.dev"
+    affiliation: "Tyxter"
+version: "0.1.0"
+date-released: "2026-05-13"
+license: MIT
+keywords:
+  - source downgrading
+  - information flow control
+  - provenance
+  - agent memory
+  - trust integrity
+  - derived records
+  - retrieval-augmented generation
+preferred-citation:
+  type: article
+  title: "Source Downgrading: Trust-Bounded Writeback for Derived Memory Records"
+  authors:
+    - given-names: "Diego"
+      family-names: "Falkowski Carboni"
+      email: "diego@tyxter.dev"
+      affiliation: "Tyxter"
+  year: 2026
