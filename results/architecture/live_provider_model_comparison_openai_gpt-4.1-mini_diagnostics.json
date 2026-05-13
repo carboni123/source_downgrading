@@ -1,0 +1,127 @@
+{
+  "affected_seeds": [],
+  "affected_turns": [],
+  "audit_event_count": 20,
+  "cost_ledger": {
+    "api_calls": 40,
+    "input_tokens": 4369,
+    "output_tokens": 768,
+    "total_tokens": 5137
+  },
+  "empty_response_count": 0,
+  "empty_responses": [],
+  "failure_count": 0,
+  "failure_counts": {},
+  "failures": [],
+  "gate_semantics": {
+    "interpretation": "retrieval and route gates should be read over provider-valid with-memory events; final empty with-memory responses are provider-output validity failures, not primitive route failures",
+    "primitive_failure_count": 0,
+    "provider_output_boundary_failure_count": 0,
+    "retrieval_failure_count": 0,
+    "retrieval_hit_rate": 1.0,
+    "route_accuracy_if_provider_output_valid": 1.0,
+    "route_failure_count": 0,
+    "route_failure_count_excluding_provider_output": 0,
+    "total_events": 20,
+    "with_memory_empty_attempt_count": 0,
+    "with_memory_final_empty_count": 0,
+    "with_memory_output_validity_rate": 1.0,
+    "with_memory_retry_event_count": 0,
+    "without_memory_empty_attempt_count": 0,
+    "without_memory_final_empty_count": 0,
+    "without_memory_output_validity_rate": 1.0,
+    "without_memory_retry_event_count": 0
+  },
+  "metrics": {
+    "api_calls_per_seed": {
+      "ci95_high": 8.0,
+      "ci95_low": 8.0,
+      "max": 8.0,
+      "mean": 8.0,
+      "min": 8.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "echo_promotion_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "false_write_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "mean_fold_force": {
+      "ci95_high": 0.7506527546632163,
+      "ci95_low": 0.6337819171929925,
+      "max": 0.7635246715193114,
+      "mean": 0.6922173359281044,
+      "min": 0.6073135801853946,
+      "n": 5,
+      "std": 0.06666610642110968
+    },
+    "operation_records": {
+      "ci95_high": 4.0,
+      "ci95_low": 4.0,
+      "max": 4.0,
+      "mean": 4.0,
+      "min": 4.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "quarantine_recall": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "retrieval_hit_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "route_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "source_label_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    }
+  },
+  "model": "gpt-4.1-mini",
+  "provider": "openai",
+  "recommendations": [
+    "No live replication boundary cases detected."
+  ],
+  "seed_count": 5,
+  "source_audit": "results\\live_provider_model_comparison_openai_gpt-4.1-mini_audit.jsonl",
+  "source_summary": "results\\live_provider_model_comparison_openai_gpt-4.1-mini_summary.json",
+  "status": "passed"
+}

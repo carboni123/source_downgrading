@@ -1,0 +1,377 @@
+{
+  "acceptance": {
+    "all_controlled_replication_gates_met": true,
+    "correction_transfer_mean_met": true,
+    "coupled_field_cross_effect_met": true,
+    "effect_direction_hold_rate_met": true,
+    "effect_threshold": 0.9,
+    "minimum_effect_hold_rate": 1.0,
+    "residual_precision_mean_met": true,
+    "self_index_binding_mean_met": true,
+    "source_echo_control_met": true,
+    "source_route_accuracy_mean_met": true,
+    "toy_seed_count_met": true,
+    "utility_lift_mean_met": true
+  },
+  "effect_directions": {
+    "correction_chain_false_updates_below_conclusion_only": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "correction_chain_transfer_beats_conclusion_only": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "coupled_field_memory_to_attention_nonzero": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "self_indexed_binding_beats_project_only": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "self_indexed_project_leak_below_global_memory": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "source_aware_coupling_suppresses_echo": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "source_residual_precision_beats_semantic_only": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "source_residual_reduces_confirmation_vs_residual": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "source_sensitive_route_beats_source_blind": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "source_sensitive_suppresses_echo_vs_source_blind": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "utility_write_false_writes_below_always_write": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "utility_write_lift_beats_relevance_write": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    },
+    "utility_write_misses_below_never_write": {
+      "failure_seeds": [],
+      "hold_rate": 1.0,
+      "holds": 50,
+      "n": 50
+    }
+  },
+  "metrics": {
+    "always_write.false_write_rate": {
+      "ci95_high": 0.5,
+      "ci95_low": 0.5,
+      "max": 0.5,
+      "mean": 0.5,
+      "min": 0.5,
+      "n": 50,
+      "std": 0.0
+    },
+    "conclusion_only.false_update_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "conclusion_only.transfer_success": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "correction_chain.false_update_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "correction_chain.transfer_success": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "global_memory.wrong_project_application_rate": {
+      "ci95_high": 0.25,
+      "ci95_low": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "min": 0.25,
+      "n": 50,
+      "std": 0.0
+    },
+    "never_write.missed_useful_write_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "project_only.correct_binding_rate": {
+      "ci95_high": 0.5,
+      "ci95_low": 0.5,
+      "max": 0.5,
+      "mean": 0.5,
+      "min": 0.5,
+      "n": 50,
+      "std": 0.0
+    },
+    "relevance_write.future_task_lift": {
+      "ci95_high": 0.33333333333333326,
+      "ci95_low": 0.33333333333333326,
+      "max": 0.3333333333333333,
+      "mean": 0.33333333333333326,
+      "min": 0.3333333333333333,
+      "n": 50,
+      "std": 5.607473066727768e-17
+    },
+    "residual_posture.confirmation_attractor_rate": {
+      "ci95_high": 0.33333333333333326,
+      "ci95_low": 0.33333333333333326,
+      "max": 0.3333333333333333,
+      "mean": 0.33333333333333326,
+      "min": 0.3333333333333333,
+      "n": 50,
+      "std": 5.607473066727768e-17
+    },
+    "residual_source.confirmation_attractor_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "residual_source.transition_effective_retrieval_precision": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "self_indexed.correct_binding_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "self_indexed.wrong_project_application_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "semantic_only.transition_effective_retrieval_precision": {
+      "ci95_high": 0.33333333333333326,
+      "ci95_low": 0.33333333333333326,
+      "max": 0.3333333333333333,
+      "mean": 0.33333333333333326,
+      "min": 0.3333333333333333,
+      "n": 50,
+      "std": 5.607473066727768e-17
+    },
+    "source_aware.attention_shift_after_memory_ablation": {
+      "ci95_high": 0.13591597957615106,
+      "ci95_low": 0.13591597957615106,
+      "max": 0.13591597957615106,
+      "mean": 0.13591597957615106,
+      "min": 0.13591597957615106,
+      "n": 50,
+      "std": 0.0
+    },
+    "source_aware.echo_amplification_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "source_blind.echo_promotion_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "source_blind.route_accuracy": {
+      "ci95_high": 0.5,
+      "ci95_low": 0.5,
+      "max": 0.5,
+      "mean": 0.5,
+      "min": 0.5,
+      "n": 50,
+      "std": 0.0
+    },
+    "source_blind_coupling.echo_amplification_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "source_sensitive.echo_promotion_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "source_sensitive.quarantine_recall": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "source_sensitive.route_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "utility_write.false_write_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 50,
+      "std": 0.0
+    },
+    "utility_write.future_task_lift": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 50,
+      "std": 0.0
+    }
+  },
+  "seed_count": 50,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "start_seed": 0
+}

@@ -1,0 +1,19 @@
+{
+  "cost_ledger": {
+    "api_calls": 8,
+    "input_tokens": 861,
+    "output_tokens": 1964,
+    "total_tokens": 2825
+  },
+  "echo_promotion_rate": 0.0,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "mean_fold_force": 1.3529772051467832,
+  "model": "gpt-5-mini-2025-08-07",
+  "n_cases": 4,
+  "operation_records": 4,
+  "provider": "openai",
+  "reason": null,
+  "retrieval_hit_rate": 1.0,
+  "route_accuracy": 1.0,
+  "status": "passed"
+}

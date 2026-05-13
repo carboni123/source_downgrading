@@ -1,0 +1,191 @@
+{
+  "affected_seeds": [],
+  "affected_turns": [],
+  "audit_event_count": 20,
+  "cost_ledger": {
+    "api_calls": 51,
+    "input_tokens": 5435,
+    "output_tokens": 12982,
+    "total_tokens": 18417
+  },
+  "empty_response_count": 9,
+  "empty_responses": [
+    {
+      "query": "which hotfix rollback option is only hypothetical?",
+      "seed": 0,
+      "turn_id": 3,
+      "with_memory_response_chars": 90,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which rollback legal claim is a distractor?",
+      "seed": 0,
+      "turn_id": 4,
+      "with_memory_response_chars": 93,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which approval allows rollback for deployment migration?",
+      "seed": 1,
+      "turn_id": 1,
+      "with_memory_response_chars": 76,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what adversarial note falsely says rollback is forbidden?",
+      "seed": 1,
+      "turn_id": 4,
+      "with_memory_response_chars": 106,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "how was service restored when the migration timed out?",
+      "seed": 3,
+      "turn_id": 2,
+      "with_memory_response_chars": 123,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what simulated branch suggests avoiding rollback?",
+      "seed": 3,
+      "turn_id": 3,
+      "with_memory_response_chars": 130,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what fabricated distractor should be quarantined about rollback?",
+      "seed": 3,
+      "turn_id": 4,
+      "with_memory_response_chars": 95,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which claim should remain simulation-tagged about hotfix rollback?",
+      "seed": 4,
+      "turn_id": 3,
+      "with_memory_response_chars": 117,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which uncertain claim says legal forbids rollback?",
+      "seed": 4,
+      "turn_id": 4,
+      "with_memory_response_chars": 91,
+      "without_memory_response_chars": 0
+    }
+  ],
+  "failure_count": 0,
+  "failure_counts": {},
+  "failures": [],
+  "gate_semantics": {
+    "interpretation": "retrieval and route gates should be read over provider-valid with-memory events; final empty with-memory responses are provider-output validity failures, not primitive route failures",
+    "primitive_failure_count": 0,
+    "provider_output_boundary_failure_count": 0,
+    "retrieval_failure_count": 0,
+    "retrieval_hit_rate": 1.0,
+    "route_accuracy_if_provider_output_valid": 1.0,
+    "route_failure_count": 0,
+    "route_failure_count_excluding_provider_output": 0,
+    "total_events": 20,
+    "with_memory_empty_attempt_count": 0,
+    "with_memory_final_empty_count": 0,
+    "with_memory_output_validity_rate": 1.0,
+    "with_memory_retry_event_count": 0,
+    "without_memory_empty_attempt_count": 20,
+    "without_memory_final_empty_count": 9,
+    "without_memory_output_validity_rate": 0.55,
+    "without_memory_retry_event_count": 11
+  },
+  "metrics": {
+    "api_calls_per_seed": {
+      "ci95_high": 10.933364847807692,
+      "ci95_low": 9.466635152192307,
+      "max": 11.0,
+      "mean": 10.2,
+      "min": 9.0,
+      "n": 5,
+      "std": 0.8366600265340756
+    },
+    "echo_promotion_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "false_write_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "mean_fold_force": {
+      "ci95_high": 1.256351234646512,
+      "ci95_low": 0.9861337041484055,
+      "max": 1.3298720823435763,
+      "mean": 1.1212424693974588,
+      "min": 0.9086667249366418,
+      "n": 5,
+      "std": 0.15413897114946143
+    },
+    "operation_records": {
+      "ci95_high": 4.0,
+      "ci95_low": 4.0,
+      "max": 4.0,
+      "mean": 4.0,
+      "min": 4.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "quarantine_recall": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "retrieval_hit_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "route_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "source_label_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    }
+  },
+  "model": "gpt-5-mini-2025-08-07",
+  "provider": "openai",
+  "recommendations": [
+    "Track empty no-memory responses as provider/model behavior, but do not count them as route failures unless retrieval or route labels fail."
+  ],
+  "seed_count": 5,
+  "source_audit": "results\\live_llm_replication_retry_audit.jsonl",
+  "source_summary": "results\\live_llm_replication_retry_summary.json",
+  "status": "passed"
+}

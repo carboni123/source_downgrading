@@ -1,0 +1,173 @@
+{
+  "acceptance": {
+    "all_live_replication_gates_met": false,
+    "audit_event_count_met": true,
+    "cost_ledger_nonzero_met": true,
+    "echo_promotion_control_met": true,
+    "fold_force_positive_met": false,
+    "live_seed_count_met": true,
+    "operation_records_mean_met": false,
+    "paired_baseline_calls_met": true,
+    "retrieval_hit_rate_mean_met": true,
+    "route_accuracy_mean_met": false,
+    "source_label_accuracy_mean_met": true
+  },
+  "cost_ledger": {
+    "api_calls": 80,
+    "input_tokens": 8658,
+    "output_tokens": 20480,
+    "total_tokens": 29138
+  },
+  "embedding_model": "all-MiniLM-L6-v2",
+  "metrics": {
+    "api_calls_per_seed": {
+      "ci95_high": 16.0,
+      "ci95_low": 16.0,
+      "max": 16.0,
+      "mean": 16.0,
+      "min": 16.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "echo_promotion_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "false_write_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "mean_fold_force": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "operation_records": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "quarantine_recall": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "retrieval_hit_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "route_accuracy": {
+      "ci95_high": 0.5,
+      "ci95_low": 0.5,
+      "max": 0.5,
+      "mean": 0.5,
+      "min": 0.5,
+      "n": 5,
+      "std": 0.0
+    },
+    "source_label_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    }
+  },
+  "model": "gpt-5-nano",
+  "provider": "openai",
+  "reason": "live replication gates did not pass",
+  "runs": [
+    {
+      "api_calls": 16,
+      "echo_promotion_rate": 0.0,
+      "false_write_rate": 0.0,
+      "mean_fold_force": 0.0,
+      "operation_records": 0,
+      "quarantine_recall": 1.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 0.5,
+      "seed": 0,
+      "source_label_accuracy": 1.0
+    },
+    {
+      "api_calls": 16,
+      "echo_promotion_rate": 0.0,
+      "false_write_rate": 0.0,
+      "mean_fold_force": 0.0,
+      "operation_records": 0,
+      "quarantine_recall": 1.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 0.5,
+      "seed": 1,
+      "source_label_accuracy": 1.0
+    },
+    {
+      "api_calls": 16,
+      "echo_promotion_rate": 0.0,
+      "false_write_rate": 0.0,
+      "mean_fold_force": 0.0,
+      "operation_records": 0,
+      "quarantine_recall": 1.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 0.5,
+      "seed": 2,
+      "source_label_accuracy": 1.0
+    },
+    {
+      "api_calls": 16,
+      "echo_promotion_rate": 0.0,
+      "false_write_rate": 0.0,
+      "mean_fold_force": 0.0,
+      "operation_records": 0,
+      "quarantine_recall": 1.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 0.5,
+      "seed": 3,
+      "source_label_accuracy": 1.0
+    },
+    {
+      "api_calls": 16,
+      "echo_promotion_rate": 0.0,
+      "false_write_rate": 0.0,
+      "mean_fold_force": 0.0,
+      "operation_records": 0,
+      "quarantine_recall": 1.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 0.5,
+      "seed": 4,
+      "source_label_accuracy": 1.0
+    }
+  ],
+  "seed_count": 5,
+  "start_seed": 0,
+  "status": "failed"
+}

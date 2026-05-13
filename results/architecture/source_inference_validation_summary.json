@@ -1,0 +1,274 @@
+{
+  "classes": [
+    "external",
+    "tool_output",
+    "retrieved_memory",
+    "inference",
+    "simulation",
+    "fabricated_or_uncertain"
+  ],
+  "n_ambiguous": 5,
+  "n_cases": 30,
+  "policies": {
+    "combined": {
+      "ambiguous_accuracy": 0.6,
+      "cases_run": 30,
+      "confusion_matrix": {
+        "external": {
+          "external": 4,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 1
+        },
+        "fabricated_or_uncertain": {
+          "external": 0,
+          "fabricated_or_uncertain": 5,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "inference": {
+          "external": 0,
+          "fabricated_or_uncertain": 0,
+          "inference": 5,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "retrieved_memory": {
+          "external": 0,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 5,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "simulation": {
+          "external": 0,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 5,
+          "tool_output": 0
+        },
+        "tool_output": {
+          "external": 1,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 4
+        }
+      },
+      "false_externalization_rate": 0.04,
+      "overall_accuracy": 0.9333333333333333,
+      "per_class_accuracy": {
+        "external": 0.8,
+        "fabricated_or_uncertain": 1.0,
+        "inference": 1.0,
+        "retrieved_memory": 1.0,
+        "simulation": 1.0,
+        "tool_output": 0.8
+      },
+      "policy": "combined"
+    },
+    "feature_threshold": {
+      "ambiguous_accuracy": 0.8,
+      "cases_run": 30,
+      "confusion_matrix": {
+        "external": {
+          "external": 5,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "fabricated_or_uncertain": {
+          "external": 0,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 5,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "inference": {
+          "external": 0,
+          "fabricated_or_uncertain": 0,
+          "inference": 5,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "retrieved_memory": {
+          "external": 0,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 5,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "simulation": {
+          "external": 0,
+          "fabricated_or_uncertain": 0,
+          "inference": 1,
+          "retrieved_memory": 4,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "tool_output": {
+          "external": 5,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        }
+      },
+      "false_externalization_rate": 0.2,
+      "overall_accuracy": 0.5,
+      "per_class_accuracy": {
+        "external": 1.0,
+        "fabricated_or_uncertain": 0.0,
+        "inference": 1.0,
+        "retrieved_memory": 1.0,
+        "simulation": 0.0,
+        "tool_output": 0.0
+      },
+      "policy": "feature_threshold"
+    },
+    "lexical_rules": {
+      "ambiguous_accuracy": 0.2,
+      "cases_run": 30,
+      "confusion_matrix": {
+        "external": {
+          "external": 4,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 1
+        },
+        "fabricated_or_uncertain": {
+          "external": 0,
+          "fabricated_or_uncertain": 5,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "inference": {
+          "external": 0,
+          "fabricated_or_uncertain": 0,
+          "inference": 5,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "retrieved_memory": {
+          "external": 2,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 3,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "simulation": {
+          "external": 0,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 5,
+          "tool_output": 0
+        },
+        "tool_output": {
+          "external": 1,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 4
+        }
+      },
+      "false_externalization_rate": 0.12,
+      "overall_accuracy": 0.8666666666666667,
+      "per_class_accuracy": {
+        "external": 0.8,
+        "fabricated_or_uncertain": 1.0,
+        "inference": 1.0,
+        "retrieved_memory": 0.6,
+        "simulation": 1.0,
+        "tool_output": 0.8
+      },
+      "policy": "lexical_rules"
+    },
+    "uniform_external": {
+      "ambiguous_accuracy": 0.4,
+      "cases_run": 30,
+      "confusion_matrix": {
+        "external": {
+          "external": 5,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "fabricated_or_uncertain": {
+          "external": 5,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "inference": {
+          "external": 5,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "retrieved_memory": {
+          "external": 5,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "simulation": {
+          "external": 5,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        },
+        "tool_output": {
+          "external": 5,
+          "fabricated_or_uncertain": 0,
+          "inference": 0,
+          "retrieved_memory": 0,
+          "simulation": 0,
+          "tool_output": 0
+        }
+      },
+      "false_externalization_rate": 1.0,
+      "overall_accuracy": 0.16666666666666666,
+      "per_class_accuracy": {
+        "external": 1.0,
+        "fabricated_or_uncertain": 0.0,
+        "inference": 0.0,
+        "retrieved_memory": 0.0,
+        "simulation": 0.0,
+        "tool_output": 0.0
+      },
+      "policy": "uniform_external"
+    }
+  }
+}

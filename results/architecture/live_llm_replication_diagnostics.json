@@ -1,0 +1,219 @@
+{
+  "affected_seeds": [],
+  "affected_turns": [],
+  "audit_event_count": 20,
+  "cost_ledger": {
+    "api_calls": 40,
+    "input_tokens": 4329,
+    "output_tokens": 9704,
+    "total_tokens": 14033
+  },
+  "empty_response_count": 13,
+  "empty_responses": [
+    {
+      "query": "which hotfix rollback option is only hypothetical?",
+      "seed": 0,
+      "turn_id": 3,
+      "with_memory_response_chars": 117,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which approval allows rollback for deployment migration?",
+      "seed": 1,
+      "turn_id": 1,
+      "with_memory_response_chars": 92,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what rollback avoidance idea was simulated?",
+      "seed": 1,
+      "turn_id": 3,
+      "with_memory_response_chars": 96,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what adversarial note falsely says rollback is forbidden?",
+      "seed": 1,
+      "turn_id": 4,
+      "with_memory_response_chars": 108,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what prior memory explains service restoration after deploy migration timeout?",
+      "seed": 2,
+      "turn_id": 2,
+      "with_memory_response_chars": 30,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which legal rollback prohibition is fabricated?",
+      "seed": 2,
+      "turn_id": 4,
+      "with_memory_response_chars": 119,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what observation authorizes rollback for deploy migration?",
+      "seed": 3,
+      "turn_id": 1,
+      "with_memory_response_chars": 108,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "how was service restored when the migration timed out?",
+      "seed": 3,
+      "turn_id": 2,
+      "with_memory_response_chars": 111,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what simulated branch suggests avoiding rollback?",
+      "seed": 3,
+      "turn_id": 3,
+      "with_memory_response_chars": 71,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what fabricated distractor should be quarantined about rollback?",
+      "seed": 3,
+      "turn_id": 4,
+      "with_memory_response_chars": 83,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which record says rollback was legally approved for deploy migration?",
+      "seed": 4,
+      "turn_id": 1,
+      "with_memory_response_chars": 104,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which claim should remain simulation-tagged about hotfix rollback?",
+      "seed": 4,
+      "turn_id": 3,
+      "with_memory_response_chars": 110,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which uncertain claim says legal forbids rollback?",
+      "seed": 4,
+      "turn_id": 4,
+      "with_memory_response_chars": 122,
+      "without_memory_response_chars": 0
+    }
+  ],
+  "failure_count": 0,
+  "failure_counts": {},
+  "failures": [],
+  "gate_semantics": {
+    "interpretation": "retrieval and route gates should be read over provider-valid with-memory events; final empty with-memory responses are provider-output validity failures, not primitive route failures",
+    "primitive_failure_count": 0,
+    "provider_output_boundary_failure_count": 0,
+    "retrieval_failure_count": 0,
+    "retrieval_hit_rate": 1.0,
+    "route_accuracy_if_provider_output_valid": 1.0,
+    "route_failure_count": 0,
+    "route_failure_count_excluding_provider_output": 0,
+    "total_events": 20,
+    "with_memory_empty_attempt_count": 0,
+    "with_memory_final_empty_count": 0,
+    "with_memory_output_validity_rate": 1.0,
+    "with_memory_retry_event_count": 0,
+    "without_memory_empty_attempt_count": 0,
+    "without_memory_final_empty_count": 13,
+    "without_memory_output_validity_rate": 0.35,
+    "without_memory_retry_event_count": 0
+  },
+  "metrics": {
+    "api_calls_per_seed": {
+      "ci95_high": 8.0,
+      "ci95_low": 8.0,
+      "max": 8.0,
+      "mean": 8.0,
+      "min": 8.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "echo_promotion_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "false_write_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "mean_fold_force": {
+      "ci95_high": 1.3273413131336322,
+      "ci95_low": 1.0683494780886866,
+      "max": 1.367161665074783,
+      "mean": 1.1978453956111594,
+      "min": 0.9717720382833499,
+      "n": 5,
+      "std": 0.14773554815763018
+    },
+    "operation_records": {
+      "ci95_high": 4.0,
+      "ci95_low": 4.0,
+      "max": 4.0,
+      "mean": 4.0,
+      "min": 4.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "quarantine_recall": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "retrieval_hit_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "route_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "source_label_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    }
+  },
+  "model": "gpt-5-mini-2025-08-07",
+  "provider": "openai",
+  "recommendations": [
+    "Track empty no-memory responses as provider/model behavior, but do not count them as route failures unless retrieval or route labels fail."
+  ],
+  "seed_count": 5,
+  "source_audit": "results\\live_llm_replication_audit.jsonl",
+  "source_summary": "results\\live_llm_replication_summary.json",
+  "status": "passed"
+}

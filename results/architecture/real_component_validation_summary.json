@@ -1,0 +1,19 @@
+{
+  "cost_ledger": {
+    "api_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "dim": 384,
+  "embedding_available": true,
+  "embedding_error": null,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "fold_force": 0.8338691336962778,
+  "live_llm_available": true,
+  "live_llm_reason": "OPENAI_API_KEY present; live replication recorded by live_validation helper",
+  "operation_records": 4,
+  "retrieval_hit_rate": 1.0,
+  "source_echo_promotion_rate": 0.0,
+  "source_false_write_rate": 0.0,
+  "source_route_accuracy": 1.0
+}

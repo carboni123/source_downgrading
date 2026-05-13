@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.env
+.venv/
+venv/
+*.swp
+.DS_Store
+
+# LaTeX build products; keep the final PDF when intentionally produced.
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*_verify.pdf
+paper/*_verify.*
+

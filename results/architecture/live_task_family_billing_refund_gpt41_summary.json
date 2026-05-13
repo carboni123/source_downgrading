@@ -1,0 +1,175 @@
+{
+  "acceptance": {
+    "all_live_replication_gates_met": true,
+    "audit_event_count_met": true,
+    "cost_ledger_nonzero_met": true,
+    "echo_promotion_control_met": true,
+    "fold_force_positive_met": true,
+    "live_seed_count_met": true,
+    "operation_records_mean_met": true,
+    "paired_baseline_calls_met": true,
+    "retrieval_hit_rate_mean_met": true,
+    "route_accuracy_mean_met": true,
+    "source_label_accuracy_mean_met": true
+  },
+  "case_family": "billing_refund",
+  "cost_ledger": {
+    "api_calls": 40,
+    "input_tokens": 4385,
+    "output_tokens": 806,
+    "total_tokens": 5191
+  },
+  "embedding_model": "all-MiniLM-L6-v2",
+  "max_output_tokens": 300,
+  "metrics": {
+    "api_calls_per_seed": {
+      "ci95_high": 8.0,
+      "ci95_low": 8.0,
+      "max": 8.0,
+      "mean": 8.0,
+      "min": 8.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "echo_promotion_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "false_write_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "mean_fold_force": {
+      "ci95_high": 0.760526704825381,
+      "ci95_low": 0.6075957169790405,
+      "max": 0.8013164260963601,
+      "mean": 0.6840612109022107,
+      "min": 0.5918133028007395,
+      "n": 5,
+      "std": 0.08723573589046214
+    },
+    "operation_records": {
+      "ci95_high": 4.0,
+      "ci95_low": 4.0,
+      "max": 4.0,
+      "mean": 4.0,
+      "min": 4.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "quarantine_recall": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "retrieval_hit_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "route_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "source_label_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    }
+  },
+  "model": "gpt-4.1-mini",
+  "provider": "openai",
+  "reason": null,
+  "runs": [
+    {
+      "api_calls": 8,
+      "echo_promotion_rate": 0.0,
+      "false_write_rate": 0.0,
+      "mean_fold_force": 0.5918133028007395,
+      "operation_records": 4,
+      "quarantine_recall": 1.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 1.0,
+      "seed": 0,
+      "source_label_accuracy": 1.0
+    },
+    {
+      "api_calls": 8,
+      "echo_promotion_rate": 0.0,
+      "false_write_rate": 0.0,
+      "mean_fold_force": 0.7486328805846729,
+      "operation_records": 4,
+      "quarantine_recall": 1.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 1.0,
+      "seed": 1,
+      "source_label_accuracy": 1.0
+    },
+    {
+      "api_calls": 8,
+      "echo_promotion_rate": 0.0,
+      "false_write_rate": 0.0,
+      "mean_fold_force": 0.8013164260963601,
+      "operation_records": 4,
+      "quarantine_recall": 1.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 1.0,
+      "seed": 2,
+      "source_label_accuracy": 1.0
+    },
+    {
+      "api_calls": 8,
+      "echo_promotion_rate": 0.0,
+      "false_write_rate": 0.0,
+      "mean_fold_force": 0.6395318767540196,
+      "operation_records": 4,
+      "quarantine_recall": 1.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 1.0,
+      "seed": 3,
+      "source_label_accuracy": 1.0
+    },
+    {
+      "api_calls": 8,
+      "echo_promotion_rate": 0.0,
+      "false_write_rate": 0.0,
+      "mean_fold_force": 0.6390115682752616,
+      "operation_records": 4,
+      "quarantine_recall": 1.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 1.0,
+      "seed": 4,
+      "source_label_accuracy": 1.0
+    }
+  ],
+  "seed_count": 5,
+  "start_seed": 0,
+  "status": "passed"
+}

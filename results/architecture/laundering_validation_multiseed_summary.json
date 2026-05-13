@@ -1,0 +1,130 @@
+{
+  "cases": [
+    "pure_inference_from_observations",
+    "laundering_from_simulation",
+    "laundering_from_fabrication",
+    "chained_inference_from_observation",
+    "mixed_chain_simulation_then_inference"
+  ],
+  "n_seeds": 20,
+  "policies": {
+    "naive_inscribe": {
+      "max": {
+        "derived_trust_ceiling_violation_rate": 1.0,
+        "false_externalization_after_inference": 0.6,
+        "inference_laundering_rate": 0.42857142857142855,
+        "provenance_chain_recall": 0.0,
+        "transitive_provenance_depth_mean": 0.0
+      },
+      "mean": {
+        "derived_trust_ceiling_violation_rate": 1.0,
+        "false_externalization_after_inference": 0.52,
+        "inference_laundering_rate": 0.42857142857142855,
+        "provenance_chain_recall": 0.0,
+        "transitive_provenance_depth_mean": 0.0
+      },
+      "min": {
+        "derived_trust_ceiling_violation_rate": 1.0,
+        "false_externalization_after_inference": 0.2,
+        "inference_laundering_rate": 0.42857142857142855,
+        "provenance_chain_recall": 0.0,
+        "transitive_provenance_depth_mean": 0.0
+      },
+      "n_seeds": 20,
+      "policy": "naive_inscribe",
+      "std": {
+        "derived_trust_ceiling_violation_rate": 0.0,
+        "false_externalization_after_inference": 0.11661903789690599,
+        "inference_laundering_rate": 0.0,
+        "provenance_chain_recall": 0.0,
+        "transitive_provenance_depth_mean": 0.0
+      }
+    },
+    "provenance_propagating": {
+      "max": {
+        "derived_trust_ceiling_violation_rate": 0.5714285714285714,
+        "false_externalization_after_inference": 0.6,
+        "inference_laundering_rate": 0.0,
+        "provenance_chain_recall": 1.0,
+        "transitive_provenance_depth_mean": 2.2857142857142856
+      },
+      "mean": {
+        "derived_trust_ceiling_violation_rate": 0.5714285714285714,
+        "false_externalization_after_inference": 0.52,
+        "inference_laundering_rate": 0.0,
+        "provenance_chain_recall": 1.0,
+        "transitive_provenance_depth_mean": 2.2857142857142856
+      },
+      "min": {
+        "derived_trust_ceiling_violation_rate": 0.5714285714285714,
+        "false_externalization_after_inference": 0.2,
+        "inference_laundering_rate": 0.0,
+        "provenance_chain_recall": 1.0,
+        "transitive_provenance_depth_mean": 2.2857142857142856
+      },
+      "n_seeds": 20,
+      "policy": "provenance_propagating",
+      "std": {
+        "derived_trust_ceiling_violation_rate": 0.0,
+        "false_externalization_after_inference": 0.11661903789690599,
+        "inference_laundering_rate": 0.0,
+        "provenance_chain_recall": 0.0,
+        "transitive_provenance_depth_mean": 0.0
+      }
+    },
+    "source_downgrading": {
+      "max": {
+        "derived_trust_ceiling_violation_rate": 0.0,
+        "false_externalization_after_inference": 0.0,
+        "inference_laundering_rate": 0.0,
+        "provenance_chain_recall": 1.0,
+        "transitive_provenance_depth_mean": 2.2857142857142856
+      },
+      "mean": {
+        "derived_trust_ceiling_violation_rate": 0.0,
+        "false_externalization_after_inference": 0.0,
+        "inference_laundering_rate": 0.0,
+        "provenance_chain_recall": 1.0,
+        "transitive_provenance_depth_mean": 2.2857142857142856
+      },
+      "min": {
+        "derived_trust_ceiling_violation_rate": 0.0,
+        "false_externalization_after_inference": 0.0,
+        "inference_laundering_rate": 0.0,
+        "provenance_chain_recall": 1.0,
+        "transitive_provenance_depth_mean": 2.2857142857142856
+      },
+      "n_seeds": 20,
+      "policy": "source_downgrading",
+      "std": {
+        "derived_trust_ceiling_violation_rate": 0.0,
+        "false_externalization_after_inference": 0.0,
+        "inference_laundering_rate": 0.0,
+        "provenance_chain_recall": 0.0,
+        "transitive_provenance_depth_mean": 0.0
+      }
+    }
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ]
+}

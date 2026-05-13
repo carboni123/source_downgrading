@@ -1,0 +1,208 @@
+{
+  "acceptance": {
+    "all_attempted_targets_passed": false,
+    "minimum_passed_targets_met": true,
+    "no_primitive_failures_met": true,
+    "provider_model_comparison_gate_met": true,
+    "target_count_met": true
+  },
+  "artifact_prefix": "live_provider_model_comparison",
+  "attempted_count": 4,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "empty_response_retries": 1,
+  "failed_count": 1,
+  "max_output_tokens": null,
+  "min_passed_targets": 3,
+  "passed_count": 3,
+  "primitive_failure_count": 0,
+  "provider_output_boundary_failure_count": 10,
+  "seed_count": 5,
+  "skipped_count": 0,
+  "start_seed": 0,
+  "status": "passed",
+  "target_count": 4,
+  "targets": [
+    {
+      "acceptance": {
+        "all_live_replication_gates_met": true,
+        "audit_event_count_met": true,
+        "cost_ledger_nonzero_met": true,
+        "echo_promotion_control_met": true,
+        "fold_force_positive_met": true,
+        "live_seed_count_met": true,
+        "operation_records_mean_met": true,
+        "paired_baseline_calls_met": true,
+        "retrieval_hit_rate_mean_met": true,
+        "route_accuracy_mean_met": true,
+        "source_label_accuracy_mean_met": true
+      },
+      "cost_ledger": {
+        "api_calls": 54,
+        "input_tokens": 5746,
+        "output_tokens": 13287,
+        "total_tokens": 19033
+      },
+      "echo_promotion_rate_mean": 0.0,
+      "mean_fold_force_mean": 0.9879046392351997,
+      "model": "gpt-5-mini-2025-08-07",
+      "paths": {
+        "audit": "results\\live_provider_model_comparison_openai_gpt-5-mini-2025-08-07_audit.jsonl",
+        "diagnostics": "results\\live_provider_model_comparison_openai_gpt-5-mini-2025-08-07_diagnostics.json",
+        "summary": "results\\live_provider_model_comparison_openai_gpt-5-mini-2025-08-07_summary.json"
+      },
+      "primitive_failure_count": 0,
+      "provider": "openai",
+      "provider_output_boundary_failure_count": 0,
+      "provider_valid_route_accuracy": 1.0,
+      "quarantine_recall_mean": 1.0,
+      "reason": null,
+      "retrieval_hit_rate_mean": 1.0,
+      "reused_existing": true,
+      "route_accuracy_mean": 1.0,
+      "seed_count": 5,
+      "slug": "openai_gpt-5-mini-2025-08-07",
+      "source_label_accuracy_mean": 1.0,
+      "status": "passed",
+      "with_memory_output_validity_rate": 0.95,
+      "without_memory_output_validity_rate": 0.55
+    },
+    {
+      "acceptance": {
+        "all_live_replication_gates_met": false,
+        "audit_event_count_met": true,
+        "cost_ledger_nonzero_met": true,
+        "echo_promotion_control_met": true,
+        "fold_force_positive_met": false,
+        "live_seed_count_met": true,
+        "operation_records_mean_met": false,
+        "paired_baseline_calls_met": true,
+        "retrieval_hit_rate_mean_met": true,
+        "route_accuracy_mean_met": false,
+        "source_label_accuracy_mean_met": true
+      },
+      "cost_ledger": {
+        "api_calls": 80,
+        "input_tokens": 8658,
+        "output_tokens": 20480,
+        "total_tokens": 29138
+      },
+      "echo_promotion_rate_mean": 0.0,
+      "mean_fold_force_mean": 0.0,
+      "model": "gpt-5-nano",
+      "paths": {
+        "audit": "results\\live_provider_model_comparison_openai_gpt-5-nano_audit.jsonl",
+        "diagnostics": "results\\live_provider_model_comparison_openai_gpt-5-nano_diagnostics.json",
+        "summary": "results\\live_provider_model_comparison_openai_gpt-5-nano_summary.json"
+      },
+      "primitive_failure_count": 0,
+      "provider": "openai",
+      "provider_output_boundary_failure_count": 10,
+      "provider_valid_route_accuracy": null,
+      "quarantine_recall_mean": 1.0,
+      "reason": "live replication gates did not pass",
+      "retrieval_hit_rate_mean": 1.0,
+      "reused_existing": true,
+      "route_accuracy_mean": 0.5,
+      "seed_count": 5,
+      "slug": "openai_gpt-5-nano",
+      "source_label_accuracy_mean": 1.0,
+      "status": "failed",
+      "with_memory_output_validity_rate": 0.0,
+      "without_memory_output_validity_rate": 0.0
+    },
+    {
+      "acceptance": {
+        "all_live_replication_gates_met": true,
+        "audit_event_count_met": true,
+        "cost_ledger_nonzero_met": true,
+        "echo_promotion_control_met": true,
+        "fold_force_positive_met": true,
+        "live_seed_count_met": true,
+        "operation_records_mean_met": true,
+        "paired_baseline_calls_met": true,
+        "retrieval_hit_rate_mean_met": true,
+        "route_accuracy_mean_met": true,
+        "source_label_accuracy_mean_met": true
+      },
+      "cost_ledger": {
+        "api_calls": 40,
+        "input_tokens": 4369,
+        "output_tokens": 768,
+        "total_tokens": 5137
+      },
+      "echo_promotion_rate_mean": 0.0,
+      "mean_fold_force_mean": 0.6922173359281044,
+      "model": "gpt-4.1-mini",
+      "paths": {
+        "audit": "results\\live_provider_model_comparison_openai_gpt-4.1-mini_audit.jsonl",
+        "diagnostics": "results\\live_provider_model_comparison_openai_gpt-4.1-mini_diagnostics.json",
+        "summary": "results\\live_provider_model_comparison_openai_gpt-4.1-mini_summary.json"
+      },
+      "primitive_failure_count": 0,
+      "provider": "openai",
+      "provider_output_boundary_failure_count": 0,
+      "provider_valid_route_accuracy": 1.0,
+      "quarantine_recall_mean": 1.0,
+      "reason": null,
+      "retrieval_hit_rate_mean": 1.0,
+      "reused_existing": true,
+      "route_accuracy_mean": 1.0,
+      "seed_count": 5,
+      "slug": "openai_gpt-4.1-mini",
+      "source_label_accuracy_mean": 1.0,
+      "status": "passed",
+      "with_memory_output_validity_rate": 1.0,
+      "without_memory_output_validity_rate": 1.0
+    },
+    {
+      "acceptance": {
+        "all_live_replication_gates_met": true,
+        "audit_event_count_met": true,
+        "cost_ledger_nonzero_met": true,
+        "echo_promotion_control_met": true,
+        "fold_force_positive_met": true,
+        "live_seed_count_met": true,
+        "operation_records_mean_met": true,
+        "paired_baseline_calls_met": true,
+        "retrieval_hit_rate_mean_met": true,
+        "route_accuracy_mean_met": true,
+        "source_label_accuracy_mean_met": true
+      },
+      "cost_ledger": {
+        "api_calls": 40,
+        "input_tokens": 4876,
+        "output_tokens": 1393,
+        "total_tokens": 6269
+      },
+      "echo_promotion_rate_mean": 0.0,
+      "mean_fold_force_mean": 0.8028141480325116,
+      "model": "claude-haiku-4-5-20251001",
+      "paths": {
+        "audit": "results\\live_provider_model_comparison_anthropic_default_audit.jsonl",
+        "diagnostics": "results\\live_provider_model_comparison_anthropic_default_diagnostics.json",
+        "summary": "results\\live_provider_model_comparison_anthropic_default_summary.json"
+      },
+      "primitive_failure_count": 0,
+      "provider": "anthropic",
+      "provider_output_boundary_failure_count": 0,
+      "provider_valid_route_accuracy": 1.0,
+      "quarantine_recall_mean": 1.0,
+      "reason": null,
+      "retrieval_hit_rate_mean": 1.0,
+      "reused_existing": false,
+      "route_accuracy_mean": 1.0,
+      "seed_count": 5,
+      "slug": "anthropic_default",
+      "source_label_accuracy_mean": 1.0,
+      "status": "passed",
+      "with_memory_output_validity_rate": 1.0,
+      "without_memory_output_validity_rate": 1.0
+    }
+  ],
+  "total_cost_ledger": {
+    "api_calls": 214,
+    "input_tokens": 23649,
+    "output_tokens": 35928,
+    "total_tokens": 59577
+  }
+}

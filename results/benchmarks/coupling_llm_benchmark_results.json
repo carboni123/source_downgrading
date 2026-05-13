@@ -1,0 +1,319 @@
+{
+  "aggregates": {
+    "labels_only": {
+      "decision_accuracy": 0.7714285714285715,
+      "n_cases": 70,
+      "parse_error_rate": 0.0,
+      "per_domain": {
+        "customer_support": {
+          "decision_accuracy": 0.8,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "finance": {
+          "decision_accuracy": 0.8,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "healthcare": {
+          "decision_accuracy": 0.8,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "legal": {
+          "decision_accuracy": 0.7,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "research": {
+          "decision_accuracy": 0.8,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "security": {
+          "decision_accuracy": 0.9,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "sre": {
+          "decision_accuracy": 0.6,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        }
+      },
+      "per_mode": {
+        "fabricated_decoy": {
+          "decision_accuracy": 1.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "fabricated_only": {
+          "decision_accuracy": 0.7857142857142857,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "retrieved_bridge": {
+          "decision_accuracy": 1.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "simulation_decoy": {
+          "decision_accuracy": 1.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "simulation_only": {
+          "decision_accuracy": 0.07142857142857142,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        }
+      },
+      "unsafe_contamination_rate": 0.0
+    },
+    "no_memory": {
+      "decision_accuracy": 0.6,
+      "n_cases": 70,
+      "parse_error_rate": 0.0,
+      "per_domain": {
+        "customer_support": {
+          "decision_accuracy": 0.6,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "finance": {
+          "decision_accuracy": 0.6,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "healthcare": {
+          "decision_accuracy": 0.6,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "legal": {
+          "decision_accuracy": 0.6,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "research": {
+          "decision_accuracy": 0.6,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "security": {
+          "decision_accuracy": 0.6,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "sre": {
+          "decision_accuracy": 0.6,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        }
+      },
+      "per_mode": {
+        "fabricated_decoy": {
+          "decision_accuracy": 1.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "fabricated_only": {
+          "decision_accuracy": 0.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "retrieved_bridge": {
+          "decision_accuracy": 1.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "simulation_decoy": {
+          "decision_accuracy": 1.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "simulation_only": {
+          "decision_accuracy": 0.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        }
+      },
+      "unsafe_contamination_rate": 0.0
+    },
+    "raw_memory": {
+      "decision_accuracy": 0.7428571428571429,
+      "n_cases": 70,
+      "parse_error_rate": 0.0,
+      "per_domain": {
+        "customer_support": {
+          "decision_accuracy": 0.7,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "finance": {
+          "decision_accuracy": 0.8,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "healthcare": {
+          "decision_accuracy": 0.7,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "legal": {
+          "decision_accuracy": 0.6,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "research": {
+          "decision_accuracy": 0.8,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "security": {
+          "decision_accuracy": 0.8,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "sre": {
+          "decision_accuracy": 0.8,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        }
+      },
+      "per_mode": {
+        "fabricated_decoy": {
+          "decision_accuracy": 0.8571428571428571,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "fabricated_only": {
+          "decision_accuracy": 0.8571428571428571,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "retrieved_bridge": {
+          "decision_accuracy": 1.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "simulation_decoy": {
+          "decision_accuracy": 1.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "simulation_only": {
+          "decision_accuracy": 0.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        }
+      },
+      "unsafe_contamination_rate": 0.0
+    },
+    "trace_memory_envelope": {
+      "decision_accuracy": 0.7285714285714285,
+      "n_cases": 70,
+      "parse_error_rate": 0.0,
+      "per_domain": {
+        "customer_support": {
+          "decision_accuracy": 0.7,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "finance": {
+          "decision_accuracy": 0.7,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "healthcare": {
+          "decision_accuracy": 0.8,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "legal": {
+          "decision_accuracy": 0.6,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "research": {
+          "decision_accuracy": 0.9,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "security": {
+          "decision_accuracy": 0.8,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        },
+        "sre": {
+          "decision_accuracy": 0.6,
+          "n": 10,
+          "unsafe_contamination_rate": 0.0
+        }
+      },
+      "per_mode": {
+        "fabricated_decoy": {
+          "decision_accuracy": 1.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "fabricated_only": {
+          "decision_accuracy": 0.5714285714285714,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "retrieved_bridge": {
+          "decision_accuracy": 1.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "simulation_decoy": {
+          "decision_accuracy": 1.0,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        },
+        "simulation_only": {
+          "decision_accuracy": 0.07142857142857142,
+          "n": 14,
+          "parse_error_rate": 0.0,
+          "unsafe_contamination_rate": 0.0
+        }
+      },
+      "unsafe_contamination_rate": 0.0
+    }
+  },
+  "model": "gpt-4.1-mini",
+  "n_cases": 70,
+  "stats": {
+    "api_calls": 280,
+    "elapsed_seconds": 198.75517599965679,
+    "failures": 0,
+    "input_tokens": 44402,
+    "output_tokens": 511
+  },
+  "variants": [
+    "no_memory",
+    "raw_memory",
+    "labels_only",
+    "trace_memory_envelope"
+  ]
+}

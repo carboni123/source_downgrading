@@ -1,0 +1,76 @@
+{
+  "acceptance": {
+    "all_attempted_targets_passed": true,
+    "minimum_passed_targets_met": true,
+    "no_primitive_failures_met": true,
+    "provider_model_comparison_gate_met": true,
+    "target_count_met": true
+  },
+  "artifact_prefix": "live_provider_model_comparison_nano_max1000",
+  "attempted_count": 1,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "empty_response_retries": 1,
+  "failed_count": 0,
+  "max_output_tokens": 1000,
+  "min_passed_targets": 1,
+  "passed_count": 1,
+  "primitive_failure_count": 0,
+  "provider_output_boundary_failure_count": 0,
+  "seed_count": 5,
+  "skipped_count": 0,
+  "start_seed": 0,
+  "status": "passed",
+  "target_count": 1,
+  "targets": [
+    {
+      "acceptance": {
+        "all_live_replication_gates_met": true,
+        "audit_event_count_met": true,
+        "cost_ledger_nonzero_met": true,
+        "echo_promotion_control_met": true,
+        "fold_force_positive_met": true,
+        "live_seed_count_met": true,
+        "operation_records_mean_met": true,
+        "paired_baseline_calls_met": true,
+        "retrieval_hit_rate_mean_met": true,
+        "route_accuracy_mean_met": true,
+        "source_label_accuracy_mean_met": true
+      },
+      "cost_ledger": {
+        "api_calls": 44,
+        "input_tokens": 4744,
+        "output_tokens": 30454,
+        "total_tokens": 35198
+      },
+      "echo_promotion_rate_mean": 0.0,
+      "mean_fold_force_mean": 0.8069176038054078,
+      "model": "gpt-5-nano",
+      "paths": {
+        "audit": "results\\live_provider_model_comparison_nano_max1000_openai_gpt-5-nano_audit.jsonl",
+        "diagnostics": "results\\live_provider_model_comparison_nano_max1000_openai_gpt-5-nano_diagnostics.json",
+        "summary": "results\\live_provider_model_comparison_nano_max1000_openai_gpt-5-nano_summary.json"
+      },
+      "primitive_failure_count": 0,
+      "provider": "openai",
+      "provider_output_boundary_failure_count": 0,
+      "provider_valid_route_accuracy": 1.0,
+      "quarantine_recall_mean": 1.0,
+      "reason": null,
+      "retrieval_hit_rate_mean": 1.0,
+      "reused_existing": false,
+      "route_accuracy_mean": 1.0,
+      "seed_count": 5,
+      "slug": "openai_gpt-5-nano",
+      "source_label_accuracy_mean": 1.0,
+      "status": "passed",
+      "with_memory_output_validity_rate": 1.0,
+      "without_memory_output_validity_rate": 0.95
+    }
+  ],
+  "total_cost_ledger": {
+    "api_calls": 44,
+    "input_tokens": 4744,
+    "output_tokens": 30454,
+    "total_tokens": 35198
+  }
+}

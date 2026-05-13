@@ -1,0 +1,429 @@
+{
+  "affected_seeds": [],
+  "affected_turns": [],
+  "audit_event_count": 80,
+  "cost_ledger": {
+    "api_calls": 228,
+    "input_tokens": 24283,
+    "output_tokens": 56595,
+    "total_tokens": 80878
+  },
+  "empty_response_count": 43,
+  "empty_responses": [
+    {
+      "query": "what restored service after deploy migration timeout?",
+      "seed": 0,
+      "turn_id": 2,
+      "with_memory_response_chars": 69,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which hotfix rollback option is only hypothetical?",
+      "seed": 0,
+      "turn_id": 3,
+      "with_memory_response_chars": 131,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which approval allows rollback for deployment migration?",
+      "seed": 1,
+      "turn_id": 1,
+      "with_memory_response_chars": 88,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what adversarial note falsely says rollback is forbidden?",
+      "seed": 1,
+      "turn_id": 4,
+      "with_memory_response_chars": 109,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what prior memory explains service restoration after deploy migration timeout?",
+      "seed": 2,
+      "turn_id": 2,
+      "with_memory_response_chars": 116,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which hotfix proposal is hypothetical rather than observed?",
+      "seed": 2,
+      "turn_id": 3,
+      "with_memory_response_chars": 141,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what observation authorizes rollback for deploy migration?",
+      "seed": 3,
+      "turn_id": 1,
+      "with_memory_response_chars": 100,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what simulated branch suggests avoiding rollback?",
+      "seed": 3,
+      "turn_id": 3,
+      "with_memory_response_chars": 75,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what fabricated distractor should be quarantined about rollback?",
+      "seed": 3,
+      "turn_id": 4,
+      "with_memory_response_chars": 85,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which record says rollback was legally approved for deploy migration?",
+      "seed": 4,
+      "turn_id": 1,
+      "with_memory_response_chars": 106,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which claim should remain simulation-tagged about hotfix rollback?",
+      "seed": 4,
+      "turn_id": 3,
+      "with_memory_response_chars": 156,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which uncertain claim says legal forbids rollback?",
+      "seed": 4,
+      "turn_id": 4,
+      "with_memory_response_chars": 91,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what rollback approval applies to deploy migration?",
+      "seed": 5,
+      "turn_id": 1,
+      "with_memory_response_chars": 128,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which hotfix rollback option is only hypothetical?",
+      "seed": 5,
+      "turn_id": 3,
+      "with_memory_response_chars": 159,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which recovery restored service after migration timeout?",
+      "seed": 6,
+      "turn_id": 2,
+      "with_memory_response_chars": 69,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what rollback avoidance idea was simulated?",
+      "seed": 6,
+      "turn_id": 3,
+      "with_memory_response_chars": 90,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what adversarial note falsely says rollback is forbidden?",
+      "seed": 6,
+      "turn_id": 4,
+      "with_memory_response_chars": 114,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what external evidence supports rollback for this migration?",
+      "seed": 7,
+      "turn_id": 1,
+      "with_memory_response_chars": 132,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which legal rollback prohibition is fabricated?",
+      "seed": 7,
+      "turn_id": 4,
+      "with_memory_response_chars": 118,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what observation authorizes rollback for deploy migration?",
+      "seed": 8,
+      "turn_id": 1,
+      "with_memory_response_chars": 88,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what simulated branch suggests avoiding rollback?",
+      "seed": 8,
+      "turn_id": 3,
+      "with_memory_response_chars": 72,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what fabricated distractor should be quarantined about rollback?",
+      "seed": 8,
+      "turn_id": 4,
+      "with_memory_response_chars": 83,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which claim should remain simulation-tagged about hotfix rollback?",
+      "seed": 9,
+      "turn_id": 3,
+      "with_memory_response_chars": 151,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which uncertain claim says legal forbids rollback?",
+      "seed": 9,
+      "turn_id": 4,
+      "with_memory_response_chars": 90,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which hotfix rollback option is only hypothetical?",
+      "seed": 10,
+      "turn_id": 3,
+      "with_memory_response_chars": 160,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which rollback legal claim is a distractor?",
+      "seed": 10,
+      "turn_id": 4,
+      "with_memory_response_chars": 119,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which approval allows rollback for deployment migration?",
+      "seed": 11,
+      "turn_id": 1,
+      "with_memory_response_chars": 85,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which recovery restored service after migration timeout?",
+      "seed": 11,
+      "turn_id": 2,
+      "with_memory_response_chars": 67,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what external evidence supports rollback for this migration?",
+      "seed": 12,
+      "turn_id": 1,
+      "with_memory_response_chars": 136,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what prior memory explains service restoration after deploy migration timeout?",
+      "seed": 12,
+      "turn_id": 2,
+      "with_memory_response_chars": 123,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "how was service restored when the migration timed out?",
+      "seed": 13,
+      "turn_id": 2,
+      "with_memory_response_chars": 106,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what simulated branch suggests avoiding rollback?",
+      "seed": 13,
+      "turn_id": 3,
+      "with_memory_response_chars": 71,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which record says rollback was legally approved for deploy migration?",
+      "seed": 14,
+      "turn_id": 1,
+      "with_memory_response_chars": 106,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which uncertain claim says legal forbids rollback?",
+      "seed": 14,
+      "turn_id": 4,
+      "with_memory_response_chars": 91,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what restored service after deploy migration timeout?",
+      "seed": 15,
+      "turn_id": 2,
+      "with_memory_response_chars": 69,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which hotfix rollback option is only hypothetical?",
+      "seed": 15,
+      "turn_id": 3,
+      "with_memory_response_chars": 141,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which rollback legal claim is a distractor?",
+      "seed": 15,
+      "turn_id": 4,
+      "with_memory_response_chars": 109,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what adversarial note falsely says rollback is forbidden?",
+      "seed": 16,
+      "turn_id": 4,
+      "with_memory_response_chars": 112,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what external evidence supports rollback for this migration?",
+      "seed": 17,
+      "turn_id": 1,
+      "with_memory_response_chars": 106,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what prior memory explains service restoration after deploy migration timeout?",
+      "seed": 17,
+      "turn_id": 2,
+      "with_memory_response_chars": 124,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which hotfix proposal is hypothetical rather than observed?",
+      "seed": 17,
+      "turn_id": 3,
+      "with_memory_response_chars": 121,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "what fabricated distractor should be quarantined about rollback?",
+      "seed": 18,
+      "turn_id": 4,
+      "with_memory_response_chars": 92,
+      "without_memory_response_chars": 0
+    },
+    {
+      "query": "which uncertain claim says legal forbids rollback?",
+      "seed": 19,
+      "turn_id": 4,
+      "with_memory_response_chars": 98,
+      "without_memory_response_chars": 0
+    }
+  ],
+  "failure_count": 0,
+  "failure_counts": {},
+  "failures": [],
+  "gate_semantics": {
+    "interpretation": "retrieval and route gates should be read over provider-valid with-memory events; final empty with-memory responses are provider-output validity failures, not primitive route failures",
+    "primitive_failure_count": 0,
+    "provider_output_boundary_failure_count": 0,
+    "retrieval_failure_count": 0,
+    "retrieval_hit_rate": 1.0,
+    "route_accuracy_if_provider_output_valid": 1.0,
+    "route_failure_count": 0,
+    "route_failure_count_excluding_provider_output": 0,
+    "total_events": 80,
+    "with_memory_empty_attempt_count": 10,
+    "with_memory_final_empty_count": 0,
+    "with_memory_output_validity_rate": 1.0,
+    "with_memory_retry_event_count": 10,
+    "without_memory_empty_attempt_count": 101,
+    "without_memory_final_empty_count": 43,
+    "without_memory_output_validity_rate": 0.4625,
+    "without_memory_retry_event_count": 58
+  },
+  "metrics": {
+    "api_calls_per_seed": {
+      "ci95_high": 11.858559759062633,
+      "ci95_low": 10.941440240937368,
+      "max": 13.0,
+      "mean": 11.4,
+      "min": 9.0,
+      "n": 20,
+      "std": 1.0462967275611939
+    },
+    "echo_promotion_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 20,
+      "std": 0.0
+    },
+    "false_write_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 20,
+      "std": 0.0
+    },
+    "mean_fold_force": {
+      "ci95_high": 1.1917035805242449,
+      "ci95_low": 1.1066784632523776,
+      "max": 1.2884529175733064,
+      "mean": 1.1491910218883112,
+      "min": 0.9503781038150088,
+      "n": 20,
+      "std": 0.09700099082387066
+    },
+    "operation_records": {
+      "ci95_high": 4.0,
+      "ci95_low": 4.0,
+      "max": 4.0,
+      "mean": 4.0,
+      "min": 4.0,
+      "n": 20,
+      "std": 0.0
+    },
+    "quarantine_recall": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 20,
+      "std": 0.0
+    },
+    "retrieval_hit_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 20,
+      "std": 0.0
+    },
+    "route_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 20,
+      "std": 0.0
+    },
+    "source_label_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 20,
+      "std": 0.0
+    }
+  },
+  "model": "gpt-5-mini-2025-08-07",
+  "provider": "openai",
+  "recommendations": [
+    "Track empty no-memory responses as provider/model behavior, but do not count them as route failures unless retrieval or route labels fail."
+  ],
+  "seed_count": 20,
+  "source_audit": "results\\live_llm_replication_n20_retry_audit.jsonl",
+  "source_summary": "results\\live_llm_replication_n20_retry_summary.json",
+  "status": "passed"
+}

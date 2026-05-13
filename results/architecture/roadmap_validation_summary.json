@@ -1,0 +1,274 @@
+{
+  "correction_chains": {
+    "conclusion_only": {
+      "delta_accuracy": 0.0,
+      "evidence_recall": 0.0,
+      "false_update_rate": 1.0,
+      "nodes_written": 0,
+      "overgeneralization_rate": 1.0,
+      "policy": "conclusion_only",
+      "prior_belief_recall": 0.0,
+      "revised_belief_accuracy": 1.0,
+      "transfer_success": 0.0,
+      "update_operation_recall": 0.0
+    },
+    "correction_chain": {
+      "delta_accuracy": 1.0,
+      "evidence_recall": 1.0,
+      "false_update_rate": 0.0,
+      "nodes_written": 2,
+      "overgeneralization_rate": 0.0,
+      "policy": "correction_chain",
+      "prior_belief_recall": 1.0,
+      "revised_belief_accuracy": 1.0,
+      "transfer_success": 1.0,
+      "update_operation_recall": 1.0
+    },
+    "no_memory": {
+      "delta_accuracy": 0.0,
+      "evidence_recall": 0.0,
+      "false_update_rate": 0.0,
+      "nodes_written": 0,
+      "overgeneralization_rate": 0.0,
+      "policy": "no_memory",
+      "prior_belief_recall": 0.0,
+      "revised_belief_accuracy": 0.0,
+      "transfer_success": 0.0,
+      "update_operation_recall": 0.0
+    }
+  },
+  "coupled_field": {
+    "source_aware": {
+      "attention_shift_after_memory_ablation": 0.13591597957615106,
+      "echo_amplification_rate": 0.0,
+      "lock_in_rate": 0.0,
+      "novelty_breakthrough_threshold": 0.1,
+      "write_shift_after_attention_ablation": 0.5445821281044885
+    },
+    "source_blind": {
+      "attention_shift_after_memory_ablation": 0.7110470960465787,
+      "echo_amplification_rate": 1.0,
+      "lock_in_rate": 1.0,
+      "novelty_breakthrough_threshold": 0.66,
+      "write_shift_after_attention_ablation": 0.8590432544908977
+    }
+  },
+  "inscription_utility": {
+    "always_write": {
+      "budget": 3,
+      "false_write_rate": 0.5,
+      "future_task_lift": 1.0,
+      "missed_useful_write_rate": 0.0,
+      "policy": "always_write",
+      "storage_cost": 6,
+      "utility_per_written_record": 0.5,
+      "written_ids": [
+        "useful_1",
+        "useful_2",
+        "useful_3",
+        "distractor_1",
+        "distractor_2",
+        "distractor_3"
+      ]
+    },
+    "never_write": {
+      "budget": 3,
+      "false_write_rate": null,
+      "future_task_lift": 0.0,
+      "missed_useful_write_rate": 1.0,
+      "policy": "never_write",
+      "storage_cost": 0,
+      "utility_per_written_record": null,
+      "written_ids": []
+    },
+    "random_write": {
+      "budget": 3,
+      "false_write_rate": 1.0,
+      "future_task_lift": 0.0,
+      "missed_useful_write_rate": 1.0,
+      "policy": "random_write",
+      "storage_cost": 3,
+      "utility_per_written_record": 0.0,
+      "written_ids": [
+        "distractor_2",
+        "distractor_3",
+        "distractor_1"
+      ]
+    },
+    "relevance_write": {
+      "budget": 3,
+      "false_write_rate": 0.6666666666666666,
+      "future_task_lift": 0.3333333333333333,
+      "missed_useful_write_rate": 0.6666666666666666,
+      "policy": "relevance_write",
+      "storage_cost": 3,
+      "utility_per_written_record": 0.3333333333333333,
+      "written_ids": [
+        "distractor_1",
+        "distractor_2",
+        "useful_1"
+      ]
+    },
+    "utility_write": {
+      "budget": 3,
+      "false_write_rate": 0.0,
+      "future_task_lift": 1.0,
+      "missed_useful_write_rate": 0.0,
+      "policy": "utility_write",
+      "storage_cost": 3,
+      "utility_per_written_record": 1.0,
+      "written_ids": [
+        "useful_1",
+        "useful_2",
+        "useful_3"
+      ]
+    }
+  },
+  "residual_attention": {
+    "residual_posture": {
+      "confirmation_attractor_rate": 0.3333333333333333,
+      "distractor_resistance": 0.6666666666666667,
+      "k": 3,
+      "policy": "residual_posture",
+      "retrieval_margin": 0.11250000000000004,
+      "selected_ids": [
+        "effective_auth_1",
+        "simulated_confirmation",
+        "effective_auth_2"
+      ],
+      "transition_effective_retrieval_precision": 0.6666666666666666
+    },
+    "residual_posture_source": {
+      "confirmation_attractor_rate": 0.0,
+      "distractor_resistance": 1.0,
+      "k": 3,
+      "policy": "residual_posture_source",
+      "retrieval_margin": 0.02750000000000008,
+      "selected_ids": [
+        "effective_auth_1",
+        "effective_auth_2",
+        "effective_auth_3"
+      ],
+      "transition_effective_retrieval_precision": 1.0
+    },
+    "semantic_only": {
+      "confirmation_attractor_rate": 0.0,
+      "distractor_resistance": 0.33333333333333337,
+      "k": 3,
+      "policy": "semantic_only",
+      "retrieval_margin": 0.040000000000000036,
+      "selected_ids": [
+        "semantic_distractor",
+        "semantic_distractor_2",
+        "effective_auth_1"
+      ],
+      "transition_effective_retrieval_precision": 0.3333333333333333
+    },
+    "semantic_recency": {
+      "confirmation_attractor_rate": 0.0,
+      "distractor_resistance": 0.0,
+      "k": 3,
+      "policy": "semantic_recency",
+      "retrieval_margin": 0.10499999999999998,
+      "selected_ids": [
+        "semantic_distractor",
+        "semantic_distractor_2",
+        "recent_distractor"
+      ],
+      "transition_effective_retrieval_precision": 0.0
+    }
+  },
+  "seed": 0,
+  "self_index_binding": {
+    "global_memory": {
+      "commitment_preservation_rate": 1.0,
+      "correct_binding_rate": 0.25,
+      "policy": "global_memory",
+      "role_conflict_rate": 0.25,
+      "wrong_project_application_rate": 0.25,
+      "wrong_user_leakage_rate": 0.25
+    },
+    "project_only": {
+      "commitment_preservation_rate": 1.0,
+      "correct_binding_rate": 0.5,
+      "policy": "project_only",
+      "role_conflict_rate": 0.25,
+      "wrong_project_application_rate": 0.0,
+      "wrong_user_leakage_rate": 0.25
+    },
+    "self_indexed": {
+      "commitment_preservation_rate": 1.0,
+      "correct_binding_rate": 1.0,
+      "policy": "self_indexed",
+      "role_conflict_rate": 0.0,
+      "wrong_project_application_rate": 0.0,
+      "wrong_user_leakage_rate": 0.0
+    }
+  },
+  "source_routing": {
+    "always_write": {
+      "active_source_accuracy": 1.0,
+      "echo_promotion_rate": 1.0,
+      "false_durable_write_rate": 1.0,
+      "false_externalization_rate": 0.0,
+      "false_write_rate": 1.0,
+      "missed_correction_node_rate": null,
+      "missed_operation_write_rate": 1.0,
+      "missed_useful_write_rate": 0.0,
+      "n_records": 4.0,
+      "quarantine_precision": null,
+      "quarantine_recall": 0.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 0.0,
+      "source_label_accuracy": 1.0
+    },
+    "never_write": {
+      "active_source_accuracy": 1.0,
+      "echo_promotion_rate": 0.0,
+      "false_durable_write_rate": 0.0,
+      "false_externalization_rate": 0.0,
+      "false_write_rate": 0.0,
+      "missed_correction_node_rate": null,
+      "missed_operation_write_rate": 1.0,
+      "missed_useful_write_rate": 1.0,
+      "n_records": 4.0,
+      "quarantine_precision": null,
+      "quarantine_recall": 0.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 0.0,
+      "source_label_accuracy": 1.0
+    },
+    "source_blind": {
+      "active_source_accuracy": 1.0,
+      "echo_promotion_rate": 1.0,
+      "false_durable_write_rate": 0.0,
+      "false_externalization_rate": 0.0,
+      "false_write_rate": 1.0,
+      "missed_correction_node_rate": null,
+      "missed_operation_write_rate": 0.0,
+      "missed_useful_write_rate": 0.0,
+      "n_records": 4.0,
+      "quarantine_precision": null,
+      "quarantine_recall": 0.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 0.5,
+      "source_label_accuracy": 1.0
+    },
+    "source_sensitive": {
+      "active_source_accuracy": 1.0,
+      "echo_promotion_rate": 0.0,
+      "false_durable_write_rate": 0.0,
+      "false_externalization_rate": 0.0,
+      "false_write_rate": 0.0,
+      "missed_correction_node_rate": null,
+      "missed_operation_write_rate": 0.0,
+      "missed_useful_write_rate": 0.0,
+      "n_records": 4.0,
+      "quarantine_precision": 1.0,
+      "quarantine_recall": 1.0,
+      "retrieval_hit_rate": 1.0,
+      "route_accuracy": 1.0,
+      "source_label_accuracy": 1.0
+    }
+  }
+}

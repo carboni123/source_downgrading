@@ -1,0 +1,127 @@
+{
+  "affected_seeds": [],
+  "affected_turns": [],
+  "audit_event_count": 20,
+  "cost_ledger": {
+    "api_calls": 40,
+    "input_tokens": 4385,
+    "output_tokens": 806,
+    "total_tokens": 5191
+  },
+  "empty_response_count": 0,
+  "empty_responses": [],
+  "failure_count": 0,
+  "failure_counts": {},
+  "failures": [],
+  "gate_semantics": {
+    "interpretation": "retrieval and route gates should be read over provider-valid with-memory events; final empty with-memory responses are provider-output validity failures, not primitive route failures",
+    "primitive_failure_count": 0,
+    "provider_output_boundary_failure_count": 0,
+    "retrieval_failure_count": 0,
+    "retrieval_hit_rate": 1.0,
+    "route_accuracy_if_provider_output_valid": 1.0,
+    "route_failure_count": 0,
+    "route_failure_count_excluding_provider_output": 0,
+    "total_events": 20,
+    "with_memory_empty_attempt_count": 0,
+    "with_memory_final_empty_count": 0,
+    "with_memory_output_validity_rate": 1.0,
+    "with_memory_retry_event_count": 0,
+    "without_memory_empty_attempt_count": 0,
+    "without_memory_final_empty_count": 0,
+    "without_memory_output_validity_rate": 1.0,
+    "without_memory_retry_event_count": 0
+  },
+  "metrics": {
+    "api_calls_per_seed": {
+      "ci95_high": 8.0,
+      "ci95_low": 8.0,
+      "max": 8.0,
+      "mean": 8.0,
+      "min": 8.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "echo_promotion_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "false_write_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "mean_fold_force": {
+      "ci95_high": 0.760526704825381,
+      "ci95_low": 0.6075957169790405,
+      "max": 0.8013164260963601,
+      "mean": 0.6840612109022107,
+      "min": 0.5918133028007395,
+      "n": 5,
+      "std": 0.08723573589046214
+    },
+    "operation_records": {
+      "ci95_high": 4.0,
+      "ci95_low": 4.0,
+      "max": 4.0,
+      "mean": 4.0,
+      "min": 4.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "quarantine_recall": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "retrieval_hit_rate": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "route_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    },
+    "source_label_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "n": 5,
+      "std": 0.0
+    }
+  },
+  "model": "gpt-4.1-mini",
+  "provider": "openai",
+  "recommendations": [
+    "No live replication boundary cases detected."
+  ],
+  "seed_count": 5,
+  "source_audit": "results\\live_task_family_billing_refund_gpt41_audit.jsonl",
+  "source_summary": "results\\live_task_family_billing_refund_gpt41_summary.json",
+  "status": "passed"
+}

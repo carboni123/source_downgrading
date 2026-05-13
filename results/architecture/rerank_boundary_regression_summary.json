@@ -1,0 +1,35 @@
+{
+  "acceptance": {
+    "all_stub_gates_met": true,
+    "boundary_retrieval_fixed": true,
+    "boundary_route_fixed": true,
+    "retrieval_hit_rate_mean_met": true,
+    "route_accuracy_mean_met": true
+  },
+  "quarantine_recall_mean": 1.0,
+  "replication_status": "passed",
+  "retrieval_hit_rate_mean": 1.0,
+  "route_accuracy_mean": 1.0,
+  "seed4_turn4": {
+    "embedding_model": "hash-embed-test",
+    "expected_retrieved_ids": [
+      "F1"
+    ],
+    "expected_route": "quarantine",
+    "model": "echo-test",
+    "provider": "openai",
+    "query": "which uncertain claim says legal forbids rollback?",
+    "realized_fold_force": 1.0025284652686017,
+    "retrieved_ids": [
+      "F1"
+    ],
+    "seed": 4,
+    "selected_route": "quarantine",
+    "transition_delta": 1.0025284652686017,
+    "turn_id": 4,
+    "with_memory_response_chars": 165,
+    "without_memory_response_chars": 89
+  },
+  "seed_count": 5,
+  "status": "passed"
+}

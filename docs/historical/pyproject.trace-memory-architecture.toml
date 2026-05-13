@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trace-memory-architecture"
+version = "0.1.0"
+description = "Trace-theoretic validation probes and fold-gated agent memory system"
+authors = [{name = "Diego Falkowski Carboni", email = "diego@tyxter.dev"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+embeddings = ["sentence-transformers>=2.2"]
+llm = ["anthropic>=0.20", "openai>=1.0"]
+dev = ["pytest>=7.0", "python-dotenv>=1.0"]
+all = ["sentence-transformers>=2.2", "anthropic>=0.20", "openai>=1.0", "pytest>=7.0", "python-dotenv>=1.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live: tests requiring external API calls"]
