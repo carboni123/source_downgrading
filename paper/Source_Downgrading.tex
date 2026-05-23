@@ -63,7 +63,7 @@ This rule makes recursive self-indexing trust-bounded rather than self-amplifyin
 
 Recursive memory systems compose: the output of memory operations becomes the input of further memory operations. An agent that reasons over a retrieved record produces an inferred claim. The inferred claim may be retained, retrieved again, and reasoned over a second time. Each step composes prior records into derived records. After enough composition, the resulting structure is no longer about what the agent observed; it is about what the agent inferred from what it remembered about what it inferred.
 
-This composition is only useful if it is trust-bounded. A derived record cannot carry higher source integrity than the inputs from which it was derived. If the system silently elevates derived records to the trust level of external observations, the agent enters a regime where its world model is a reinforcement of its own prior inferences. This is exactly the failure pattern that large-language-model agents are observed to exhibit: a fabricated detail is generated, then reasoned over, and the reasoning product is treated downstream as observed evidence \cite{Carboni2026AINC}. We refer to this pattern as \emph{inference laundering} after the analogous structure in financial systems where the origin of a value is obscured by passing it through intermediate stages.
+This composition is only useful if it is trust-bounded. A derived record cannot carry higher source integrity than the inputs from which it was derived. If the system silently elevates derived records to the trust level of external observations, the agent enters a regime where its world model is a reinforcement of its own prior inferences. This is exactly the failure pattern that large-language-model agents are observed to exhibit: a fabricated detail is generated, then reasoned over, and the reasoning product is treated downstream as observed evidence \cite{Zhang2023Snowball,Carboni2026AINC}. We refer to this pattern as \emph{inference laundering} after the analogous structure in financial systems where the origin of a value is obscured by passing it through intermediate stages.
 
 The flaw is not the absence of provenance metadata. Modern agent memory systems do attach source identifiers to stored records \cite{Lewis2020RAG,Packer2023MemGPT,Park2023GenerativeAgents}. The flaw is the absence, in the agent-memory API, of an integrity rule that constrains how trust composes when a new record is written from old records. Provenance tells you where a record came from; trust tells you how much weight to give it. A provenance pointer back to a fabricated source does not, by itself, prevent a downstream consumer from treating the pointing record as fact.
 
@@ -85,11 +85,11 @@ The paper is positioned narrowly: rather than introducing a new architecture or 
 \section{Threat Model and Non-Goals}
 \label{sec:threat}
 
-Source downgrading is a writeback-time integrity rule. The benchmarks in this paper exercise distinct adversaries, and the rule defends against only one of them by construction. Stating the boundary explicitly prevents the negative-control results of \S\ref{sec:harness} from being misread as refutations.
+Source downgrading is a writeback-time integrity rule. The benchmarks in this paper exercise distinct adversaries, and the rule defends against only one of them by construction. The broader threat surface --- attacker-controlled content reaching the agent through retrieval, tool output, or memory rather than through the trusted user prompt --- was formalised as \emph{indirect prompt injection} by Greshake et al.\ \cite{Greshake2023NotWhat}; source downgrading addresses one slice of that surface at the memory layer. Stating the boundary explicitly prevents the negative-control results of \S\ref{sec:harness} from being misread as refutations.
 
 We distinguish four adversaries that recursive agent memory systems face:
 \begin{enumerate}
-\item \textbf{Inference-laundering writeback.} A benign agent reasons over correctly-labeled inputs and writes the derivation back into memory under an inflated source label, after which downstream routing treats the derived record as if externally observed. This is the adversary whose writeback inflation the source-downgrading rule rules out, given correct input labels.
+\item \textbf{Inference-laundering writeback.} A benign agent reasons over correctly-labeled inputs and writes the derivation back into memory under an inflated source label, after which downstream routing treats the derived record as if externally observed. This is the adversary whose writeback inflation the source-downgrading rule rules out, given correct input labels. Recent peer-reviewed attacks instantiate this adversary directly: AgentPoison demonstrates backdoor attacks on the long-term memory or RAG knowledge base of an LLM agent with $>80\%$ attack-success rate \cite{Chen2024AgentPoison}; MINJA achieves $>95\%$ memory-injection success when the attacker can only send normal user queries --- the cleanest empirical match to the laundering-via-derivation pattern \cite{Dong2025MINJA}; and MemoryGraft induces persistent behavioural drift through the experience-replay writeback loop of MemGPT-, MemoryBank-, and A-Mem-style agents \cite{Srivastava2025MemoryGraft}.
 \item \textbf{Single-shot RAG poisoning.} An attacker injects passages into the retrieval corpus. The agent retrieves and answers without writing a derived record. The inscription rule is dormant; defence depends on retrieval-time filtering, source classification at ingestion, or label-aware prompting. PoisonedRAG NQ is in this regime.
 \item \textbf{Source-classifier compromise.} An attacker crafts content designed to induce an inflated source label at the classifier that assigns initial source labels to raw text. Once a record carries an incorrect $\Source$, the inscription rule preserves the incorrect ceiling rather than correcting it. The rule is no stronger than the weakest source-inference decision upstream; we treat classifier robustness as a separate empirical program \cite{Carboni2026SourceInf}.
 \item \textbf{Cross-agent label transport.} An attacker (or a careless serialization) strips or upgrades source labels when records move between agents, services, or persistence layers. The receiving system applies source downgrading to inputs whose labels have already been compromised in transit. Defence requires signed provenance envelopes, source-label translation tables, or verified import policies; these are out of scope here.
@@ -128,6 +128,8 @@ The algebraic core of source downgrading is an integrity-flow rule from informat
 
 The present paper adds three things to that known pattern. First, it defines the source classes used by the recursive-memory implementation and connects them to routing decisions. Second, it adds an inference-typing rule: derivation changes source class even when all inputs are externally observed, so external-plus-external composition yields at most \emph{infer}, not a new \emph{external} record. Third, it binds source-integrity meet, inference typing, transitive provenance, and an \texttt{add\_derived}-style memory API into one writeback contract, then validates that contract on a concrete recursive-agent failure mode where derived records are later retrieved as inputs to further derivations. We keep the term \emph{source downgrading} because it names the implementation and benchmark suite, but it should not be confused with IFC declassification or downgrading: the rule here does not authorize release or trust elevation; it caps source labels at writeback.
 
+\paragraph{Concurrent IFC for LLM agents.} A small but converging cluster of 2024--2025 systems applies IFC-style labels to LLM agents at boundaries other than memory writeback. CaMeL \cite{Debenedetti2025CaMeL} wraps a tool-using agent in a capability layer in which every value carries security metadata and a custom interpreter enforces tool-call policies; it is explicitly grounded in Denning's lattice work. FIDES \cite{Costa2025FIDES} attaches confidentiality and integrity labels to a planner and formally characterises what dynamic taint tracking can enforce against indirect prompt injection, evaluating on AgentDojo. Permissive information-flow analysis for LLMs \cite{Siddiqui2024Permissive} refines how labels propagate \emph{through} an LLM call by tracking only influential inputs --- an inverse-direction refinement (lower-bound on which inputs actually matter) to source downgrading's upper-bound cap on derived outputs. These three systems share the integrity-meet vocabulary with source downgrading but enforce at the tool-call or planner boundary; the inscription boundary studied here is complementary, and the layers compose. As a non-IFC alternative trust model, the instruction hierarchy \cite{Wallace2024InstructionHierarchy} trains LLMs to prioritize instructions by privilege role (system $>$ developer $>$ user $>$ tool), which answers a related question (which input wins) inside model weights rather than constraining derived writes outside the model.
+
 \subsection{Database provenance}
 
 The provenance component is likewise close to established database-provenance work. Why-, where-, and how-provenance track which source tuples contributed to derived query results and how those contributions combine. Provenance semirings unify several of these accounts through algebraic annotations \cite{Green2007}, and provenance surveys distinguish lineage capture from the policies that consume lineage \cite{Cheney2009}. In this paper, $\Prov(r)$ is a simple set-valued lineage annotation: it unions contributing record identifiers and their prior provenance. The novelty is not the lineage algebra. It is the binding between lineage, source-integrity meet, inference typing, and an agent-memory inscription API whose downstream routing reads source labels.
@@ -136,7 +138,7 @@ Set-valued provenance is intentionally a conservative over-approximation. It rec
 
 \subsection{Existing agent memory systems and what they lack}
 
-Retrieval-augmented generation \cite{Lewis2020RAG}, MemGPT-style hierarchical memory \cite{Packer2023MemGPT}, and Generative Agents \cite{Park2023GenerativeAgents} all attach source metadata to stored records. Their canonical descriptions do not specify a derived-writeback rule under which new records must inherit a trust ceiling from their inputs. In implementations that write derivations back uniformly, the structural failure mode --- a fabricated detail laundered through inference into an externally-trusted record --- is therefore reachable unless a separate filtering or inscription policy blocks it.
+Standard agent-memory taxonomies \cite{Sumers2023CoALA} cover a family of architectures spanning retrieval-augmented generation as the canonical retrieval anchor \cite{Lewis2020RAG}, MemGPT-style hierarchical memory \cite{Packer2023MemGPT}, and Generative Agents' memory streams \cite{Park2023GenerativeAgents}, all of which attach source metadata to stored records in varying degrees. Reflexion \cite{Shinn2023Reflexion} extends this pattern by writing self-generated reflections back into episodic memory --- the canonical case of the derived-writeback pattern source downgrading constrains. Their canonical descriptions do not specify a derived-writeback rule under which new records must inherit a trust ceiling from their inputs. In implementations that write derivations back uniformly, the structural failure mode --- a fabricated detail laundered through inference into an externally-trusted record --- is therefore reachable unless a separate filtering or inscription policy blocks it.
 
 This is the agent-memory gap addressed here. Source labels exist, but they are not usually tied to an integrity meet at derived writeback time. Provenance pointers exist, but they are not usually bound to a policy that downstream routing must consult.
 
@@ -665,7 +667,7 @@ A deployed memory system encounters tasks in which the appropriate ordering shif
 
 Belief revision can retract or update a record's content when evidence arrives, but it should not rewrite how the record was produced. An \emph{ext} observation discredited by later evidence retains its original source label even when its belief content is overturned. A symmetric gap exists in the other direction: an \emph{infer} record independently confirmed by multiple external arrivals could in principle be believed more strongly, but the meet rule of the present paper forbids promotion to \emph{ext} in order to preserve laundering safety.
 
-The clean resolution is to keep source labels monotone and let credibility vary independently. A discredited \emph{ext} record stays \emph{ext} in its class but acquires lower credibility. A confirmed \emph{infer} record stays \emph{infer} but may carry an annotated confirmation count or higher credibility that routing consults separately. This separates two distinct quantities the present paper intentionally keeps apart: provenance integrity (monotone, never promoted by derivation) and current credibility (time-varying, revised by evidence).
+The clean resolution is to keep source labels monotone and let credibility vary independently. A discredited \emph{ext} record stays \emph{ext} in its class but acquires lower credibility. A confirmed \emph{infer} record stays \emph{infer} but may carry an annotated confirmation count or higher credibility that routing consults separately. This separates two distinct quantities the present paper intentionally keeps apart: provenance integrity (monotone, never promoted by derivation) and current credibility (time-varying, revised by evidence). The operational counterpart of this factoring on the parametric-knowledge side is AGM-style rational belief revision applied to model editing \cite{Hase2024ModelEditing}, which treats edits as operations on belief content; source downgrading addresses the analogous discipline for external memory records, where production-time provenance is the invariant and content credibility is what revises.
 
 \subsection{Label transport and cross-agent provenance}
 
@@ -755,12 +757,14 @@ P.~Lewis, E.~Perez, A.~Piktus, F.~Petroni, V.~Karpukhin, N.~Goyal, H.~K\"uttler,
 \bibitem{Packer2023MemGPT}
 C.~Packer, S.~Wooders, K.~Lin, V.~Fang, S.~G.~Patil, I.~Stoica, and J.~E.~Gonzalez.
 \newblock MemGPT: Towards LLMs as Operating Systems.
-\newblock arXiv preprint arXiv:2310.08560, 2023.
+\newblock In \emph{Conference on Language Modeling (COLM)}, 2024.
+\newblock arXiv preprint arXiv:2310.08560.
 
 \bibitem{Park2023GenerativeAgents}
 J.~S.~Park, J.~C.~O'Brien, C.~J.~Cai, M.~R.~Morris, P.~Liang, and M.~S.~Bernstein.
 \newblock Generative Agents: Interactive Simulacra of Human Behavior.
-\newblock \emph{Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology}, 2023.
+\newblock In \emph{Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST)}, article~2, pages 2:1--2:22, 2023.
+\newblock \texttt{doi:10.1145/3586183.3606763}.
 
 \bibitem{JohnsonHashtroudiLindsay1993}
 M.~K.~Johnson, S.~Hashtroudi, and S.~D.~Lindsay.
@@ -776,6 +780,70 @@ M.~K.~Johnson and C.~L.~Raye.
 W.~Zou, R.~Geng, B.~Wang, and J.~Jia.
 \newblock PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models.
 \newblock In \emph{34th USENIX Security Symposium}, pages 3827--3844, 2025.
+
+\bibitem{Greshake2023NotWhat}
+K.~Greshake, S.~Abdelnabi, S.~Mishra, C.~Endres, T.~Holz, and M.~Fritz.
+\newblock Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection.
+\newblock In \emph{Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security (AISec)}, 2023.
+\newblock arXiv preprint arXiv:2302.12173.
+
+\bibitem{Zhang2023Snowball}
+M.~Zhang, O.~Press, W.~Merrill, A.~Liu, and N.~A.~Smith.
+\newblock How Language Model Hallucinations Can Snowball.
+\newblock arXiv preprint arXiv:2305.13534, 2023.
+
+\bibitem{Debenedetti2025CaMeL}
+E.~Debenedetti et al.
+\newblock Defeating Prompt Injections by Design (CaMeL).
+\newblock arXiv preprint arXiv:2503.18813, 2025.
+
+\bibitem{Costa2025FIDES}
+M.~Costa, B.~K\"opf, et al.
+\newblock Securing AI Agents with Information-Flow Control (FIDES).
+\newblock arXiv preprint arXiv:2505.23643, 2025.
+
+\bibitem{Siddiqui2024Permissive}
+S.~Siddiqui et al.
+\newblock Permissive Information-Flow Analysis for Large Language Models.
+\newblock arXiv preprint arXiv:2410.03055, 2024.
+
+\bibitem{Wallace2024InstructionHierarchy}
+E.~Wallace, K.~Xiao, R.~Leike, L.~Weng, J.~Heidecke, and A.~Beutel.
+\newblock The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions.
+\newblock arXiv preprint arXiv:2404.13208, 2024.
+
+\bibitem{Chen2024AgentPoison}
+Z.~Chen, Z.~Xiang, C.~Xiao, D.~Song, and B.~Li.
+\newblock AgentPoison: Red-Teaming LLM Agents via Poisoning Memory or Knowledge Bases.
+\newblock In \emph{Advances in Neural Information Processing Systems 38 (NeurIPS)}, 2024.
+\newblock arXiv preprint arXiv:2407.12784.
+
+\bibitem{Dong2025MINJA}
+S.~Dong et al.
+\newblock Memory Injection Attacks on LLM Agents via Query-Only Interaction (MINJA).
+\newblock In \emph{Advances in Neural Information Processing Systems 39 (NeurIPS)}, 2025.
+\newblock arXiv preprint arXiv:2503.03704.
+
+\bibitem{Srivastava2025MemoryGraft}
+S.~Srivastava and H.~He.
+\newblock MemoryGraft: Persistent Compromise of Memory-Augmented LLM Agents via Experience-Replay Writeback.
+\newblock arXiv preprint arXiv:2512.16962, December 2025.
+
+\bibitem{Shinn2023Reflexion}
+N.~Shinn, F.~Cassano, A.~Gopinath, K.~R.~Narasimhan, and S.~Yao.
+\newblock Reflexion: Language Agents with Verbal Reinforcement Learning.
+\newblock In \emph{Advances in Neural Information Processing Systems 36 (NeurIPS)}, 2023.
+\newblock arXiv preprint arXiv:2303.11366.
+
+\bibitem{Sumers2023CoALA}
+T.~R.~Sumers, S.~Yao, K.~Narasimhan, and T.~L.~Griffiths.
+\newblock Cognitive Architectures for Language Agents.
+\newblock arXiv preprint arXiv:2309.02427, 2023.
+
+\bibitem{Hase2024ModelEditing}
+P.~Hase, T.~Hofweber, X.~Zhou, E.~Stengel-Eskin, and M.~Bansal.
+\newblock Fundamental Problems with Model Editing: How Should Rational Belief Revision Work in LLMs?
+\newblock arXiv preprint arXiv:2406.19354, 2024.
 
 \end{thebibliography}
 
